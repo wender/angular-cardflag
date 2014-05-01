@@ -5,7 +5,7 @@
 AngularJS directive to automatically show credit card flags while typing
 
 
-This directive will look for attribute angular-cardflat on input field, will add an class card-flag and an SPAN after it with a class _flag,
+This directive will look for attribute "angular-cardflag" on an input field, will add a class card-flag and a SPAN with a class "_flag" after it,
 when you start typing a number, it will add a class corresponding to the Credit Card brand.
 
 All the magic happens on your CSS
