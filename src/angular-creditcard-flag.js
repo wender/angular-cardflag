@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('angularCardflag',[])
-    .directive('angularCardflag', function() {
+angular.module('angular-creditcard-flag',[])
+    .directive('creditcardFlag', function() {
       return {
         restrict: 'A',
         link: function($scope, el) {
