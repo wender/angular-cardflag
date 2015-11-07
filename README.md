@@ -15,8 +15,15 @@ All the magic happens in your CSS
 ## Example: 
 ```HTML
 <div class="form-group creditcard">
-                <input type="text" class="form-control" id="example1" ng-model="field.example1" placeholder="Credit Card Number" maxlengh="19" angular-mask="0000-0000-0000-0000" size="20" creditcard-flag>
-            </div>
+	<input 	type="text" 
+			class="form-control" 
+			id="example1" 
+			ng-model="field.example1" 
+			placeholder="Credit Card Number"
+			maxlengh="19" 
+			angular-mask="0000-0000-0000-0000" 
+			creditcard-flag />
+</div>
 
 <style>
 .card-flag + ._flag {
@@ -61,6 +68,14 @@ All the magic happens in your CSS
         position: relative;
     }
 </style>
+<script type="text/javascript">
+    var app = angular.module('wender', ['angularMask','angular-creditcard-flag']);
+    app.controller('MainCtrl', function($scope) {
+        $scope.field = {
+            example1: null
+        };
+    });
+</script>
 ```
 
 #### Install via bower
