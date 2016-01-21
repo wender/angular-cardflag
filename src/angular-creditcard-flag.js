@@ -10,12 +10,12 @@ angular.module('angular-creditcard-flag',[])
             function flag(el) {
                 var c = {
                     'amex' : [34,37],
+                    'elo' : [636368, 438935,504175,451416,636297,5067,4576,4011],
                     'visa' : [4],
-                    'master' : [51,52,53,54,55],
-                    'diners' : [300,301,302,303,304,305,2014,2149,36],
-                    'hipercard' : [38],
-                    'aura' : [50],
-                    'elo' : [63]
+                    'master' : [51,52,53,54,55,677189],
+                    'diners' : [300,301,302,303,304,305,309,2014,2149,36,38,39],
+                    'hipercard' : [60],
+                    'aura' : [50]
                 };
                 var matched = false;
                 for(var a in c){
@@ -24,7 +24,8 @@ angular.module('angular-creditcard-flag',[])
                             var r = new RegExp("^"+c[a][b]);
                             var remove = el[0].className.match(/\b(card-flag)\.?[^\s]+/g);
                             var css = el[0].className;
-                            if(el[0].value.match(r)){
+                            var cleanNumber = el[0].value.replace(/[^\d]/g, "");
+                            if(cleanNumber.match(r)){
                                 matched = true;
                                 el[0].className = css.replace(remove,'').concat(' card-flag-'+a);
                                 break;
@@ -41,4 +42,3 @@ angular.module('angular-creditcard-flag',[])
             }
         };
 });
-
