@@ -15,7 +15,9 @@ angular.module('angular-creditcard-flag',[])
                     'master' : [51,52,53,54,55,677189],
                     'diners' : [300,301,302,303,304,305,309,2014,2149,36,38,39],
                     'hipercard' : [60],
-                    'aura' : [50]
+                    'aura' : [50],
+                    'discover' : [6011,622,64,65],
+                    'jcb' : [35]
                 };
                 var matched = false;
                 for(var a in c){
