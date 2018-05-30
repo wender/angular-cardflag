@@ -4,6 +4,9 @@ angular.module('angular-creditcard-flag',[])
     .directive('creditcardFlag', function() {
       return {
         restrict: 'A',
+        scope: {
+          creditcardTypeModel: '=?'
+        },
         link: function($scope, el) {
             el.addClass('card-flag');
             el[0].insertAdjacentHTML('afterend','<span class="_flag"></span>');
@@ -30,9 +33,11 @@ angular.module('angular-creditcard-flag',[])
                             if(cleanNumber.match(r)){
                                 matched = true;
                                 el[0].className = css.replace(remove,'').concat(' card-flag-'+a);
+                                $scope.creditcardTypeModel = a;
                                 break;
                             }else{
                                 el[0].className = css.replace(remove,'');
+                                $scope.creditcardTypeModel = 'none';
                             }
                         }
                     }
