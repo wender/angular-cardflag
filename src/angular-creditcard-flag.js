@@ -12,14 +12,14 @@ angular.module('angular-creditcard-flag',[])
             el[0].insertAdjacentHTML('afterend','<span class="_flag"></span>');
             function flag(el) {
                 var c = {
-                    'amex' : [34,37],
-                    'elo' : [636368, 438935,504175,451416,636297,5067,4576,4011],
                     'visa' : [4],
                     'master' : [51,52,53,54,55,677189],
+                    'amex' : [34,37],
+                    'discover' : [6011,622,64,65],
+                    'elo' : [636368, 438935,504175,451416,636297,5067,4576,4011],
                     'diners' : [300,301,302,303,304,305,309,2014,2149,36,38,39],
                     'hipercard' : [60],
                     'aura' : [50],
-                    'discover' : [6011,622,64,65],
                     'jcb' : [35]
                 };
                 var matched = false;
